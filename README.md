@@ -641,7 +641,7 @@ CHM <- DSM1.C-DSM0.R
 CHM.R<-fieldRotate(CHM, theta = 2.3)
 
 # Removing the soil using mask from step 4:
-CHM.S <- fieldMask(CHM.R, mask = EX1.RemSoil$mask)
+CHM.S <- fieldMask(CHM, mask = EX1.RemSoil$mask)
 
 # Extracting the estimate plant height average (EPH):
 EPH <- fieldInfo(CHM.S$newMosaic, fieldShape = EX1.Shape$fieldShape, fun = "mean")
